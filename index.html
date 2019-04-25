@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Temperature</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<h2>Meteo</h2>
+
+<script type="text/javascript" language="javascript">
+   $(document).ready(function() {
+      $("button").click(function(event){
+
+
+          $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=Turin,IT&APPID=b26d786a7f1670c7baa4bd41868d1b92&units=metric", function(jd) {
+             $("div").append('<p> -------- </p>');
+             $("div").append('<p> Città: ' + jd.name + '</p>');
+             $("div").append('<p> Temperatura : ' + jd.main.temp + '</p>');
+             $("div").append('<p> Umidità: ' + jd.main.humidity + '</p>');
+             $("div").append('<p> Cielo: ' + jd.weather[0].description + '</p>');
+             
+          });
+          
+         $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=Rome,IT&APPID=b26d786a7f1670c7baa4bd41868d1b92&units=metric", function(jd) {
+             $("div").append('<p> -------- </p>');
+             $("div").append('<p> Città: ' + jd.name + '</p>');
+             $("div").append('<p> Temperatura : ' + jd.main.temp + '</p>');
+             $("div").append('<p> Umidità: ' + jd.main.humidity + '</p>');
+             $("div").append('<p> Cielo: ' + jd.weather[0].description + '</p>');
+             
+          });
+
+           $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=b26d786a7f1670c7baa4bd41868d1b92&units=metric", function(jd) {
+             $("div").append('<p> -------- </p>');
+             $("div").append('<p> Città: ' + jd.name + '</p>');
+             $("div").append('<p> Temperatura : ' + jd.main.temp + '</p>');
+             $("div").append('<p> Umidità: ' + jd.main.humidity + '</p>');
+             $("div").append('<p> Cielo: ' + jd.weather[0].description + '</p>');
+             
+          });
+          
+      });
+   });
+</script>
+</head>
+<body>
+   <div>
+          Info meteo città
+   </div>
+<button>Verifica</button>
+</body>
+</html>
