@@ -11,27 +11,36 @@
 
           $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=Turin,IT&APPID=b26d786a7f1670c7baa4bd41868d1b92&units=metric", function(jd) {
              $("div").append('<p> -------- </p>');
-             $("div").append('<p> Citt‡: ' + jd.name + '</p>');
+             $("div").append('<p> Citt√†: ' + jd.name + '</p>');
              $("div").append('<p> Temperatura : ' + jd.main.temp + '</p>');
-             $("div").append('<p> Umidit‡: ' + jd.main.humidity + '</p>');
+             $("div").append('<p> Umidit√†: ' + jd.main.humidity + '</p>');
              $("div").append('<p> Cielo: ' + jd.weather[0].description + '</p>');
              
           });
-          
+       
+          $.getJSON("http://api.openweathermap.org/data/2.5/weather?id=2641609&APPID=b26d786a7f1670c7baa4bd41868d1b92&units=metric", function(jd) {
+             $("div").append('<p> -------- </p>');
+             $("div").append('<p> Citt√†: ' + jd.name + '</p>');
+             $("div").append('<p> Temperatura : ' + jd.main.temp + '</p>');
+             $("div").append('<p> Umidit√†: ' + jd.main.humidity + '</p>');
+             $("div").append('<p> Cielo: ' + jd.weather[0].description + '</p>');
+             
+          });
+         
          $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=Rome,IT&APPID=b26d786a7f1670c7baa4bd41868d1b92&units=metric", function(jd) {
              $("div").append('<p> -------- </p>');
-             $("div").append('<p> Citt‡: ' + jd.name + '</p>');
+             $("div").append('<p> Citt√†: ' + jd.name + '</p>');
              $("div").append('<p> Temperatura : ' + jd.main.temp + '</p>');
-             $("div").append('<p> Umidit‡: ' + jd.main.humidity + '</p>');
+             $("div").append('<p> Umidit√†: ' + jd.main.humidity + '</p>');
              $("div").append('<p> Cielo: ' + jd.weather[0].description + '</p>');
              
           });
 
            $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=b26d786a7f1670c7baa4bd41868d1b92&units=metric", function(jd) {
              $("div").append('<p> -------- </p>');
-             $("div").append('<p> Citt‡: ' + jd.name + '</p>');
+             $("div").append('<p> Citt√†: ' + jd.name + '</p>');
              $("div").append('<p> Temperatura : ' + jd.main.temp + '</p>');
-             $("div").append('<p> Umidit‡: ' + jd.main.humidity + '</p>');
+             $("div").append('<p> Umidit√†: ' + jd.main.humidity + '</p>');
              $("div").append('<p> Cielo: ' + jd.weather[0].description + '</p>');
              
           });
@@ -42,7 +51,7 @@
 </head>
 <body>
    <div>
-          Info meteo citt‡
+          Info meteo citt√†
    </div>
 <button>Verifica</button>
 </body>
