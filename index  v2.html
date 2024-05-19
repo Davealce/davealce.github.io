@@ -20,9 +20,8 @@
             list.push(jd) });
 
            $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=b26d786a7f1670c7baa4bd41868d1b92&units=metric", function(jd) {
+            list.push(jd) });
             
-             
-          });
           list.sort((a, b) => a.main.temp - b.main.temp);
           list.forEach(stampa);
           function stampa(jd) {
